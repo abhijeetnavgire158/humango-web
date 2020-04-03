@@ -1,0 +1,7 @@
+// ======>> Font Family & Weight Function Mixins <<======
+@function family($family-name){
+    @return map-get($font-family, $family-name);
+}
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
