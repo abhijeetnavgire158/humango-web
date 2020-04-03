@@ -7,3 +7,10 @@ body{
 html, body, #root, .login-wrap{
     height: 100vh;
 }
+
+.bgYellow{
+    background: $primary;
+}
+.bgDarkGreen{
+    background: $darkBg;
+}
