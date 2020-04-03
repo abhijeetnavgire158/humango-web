@@ -1,19 +1,41 @@
 // ======>> Font Family & Weight Variables <<======
-// $font-family:(
-//     "primary":'Poppins', sans-serif,
-//     "secondary":'Titillium Web', sans-serif
-// );
-
-$font-weights:(
-    "light":300,
-    "regular":400,
-    "medium":500,
-    "semibold":600,
-    "bold":700
+$base-font-stack: (
+    poppins: (
+        light: (
+            family: ('Poppins', sans-serif),
+            weight: 300
+        ),
+        regular: (
+            family: ('Poppins', sans-serif),
+            weight: 400
+        ),
+        medium: (
+            family: ('Poppins', sans-serif),
+            weight:500
+        ),
+        semi: (
+            family: ('Poppins', sans-serif),
+            weight:600
+        ),
+    ),
+    titillium: (
+        regular: (
+            family: ('Titillium Web', sans-serif),
+            weight: 400
+        ),
+        semi: (
+            family: ('Titillium Web', sans-serif),
+            weight:600
+        ),
+        bold: (
+            family: ('Titillium Web', sans-serif),
+            weight: 700
+        ),
+    )
 );
 
 // ======>> Color Variables <<======
-$white : #fff;
+$white : #FFFFFF;
 $black: #000000;
 
 $primary: #F3CE3D;
@@ -22,7 +44,6 @@ $tertiary: #4D4084;
 $darkBg: #14232E;
 $lightBg:#DAE1E9;
 $lightText: #9E9E9E;
-
 
 .bgYellow{
     background: $primary;

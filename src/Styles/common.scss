@@ -1,63 +1,53 @@
-body{
-    font-family: 'Poppins', sans-serif;
-    line-height:1.5;
-    color:$secondary;
-}
-html, body, #root, .login-wrap{
-    height: 100vh;
-}
-.login-wrap{
-    .login-form-wrap{
-        .login-form-inner-wrap{
-            min-width: 430px;
-            h1{
-                color: $white;
-                font-size: 28px;
-                font-weight:weight(light);
-                margin-bottom: 40px;
-                strong{
-                    font-weight:weight(medium);
-                }
-            }
-            .or-label{
-                color: $white;
-                text-align: center;
-                margin: 32px 0;
-                font-size: 20px;
-                font-weight:weight(light);
-            }
-            .form-control{
-                min-height: 60px;
-                background-color: rgba($color: $black, $alpha: 0.3);
-                border-radius: 40px;
-                padding: 10px 30px;
-                font-size: 20px;
-                font-weight:weight(light);
-                border-color:rgba($color: $white, $alpha: 0.3);
-                margin-bottom: 30px;
-            }
-            .btn-default{
-                font-size: 22px;
-                min-height: 60px;
-                border-radius: 30px;
-                font-weight:weight(medium);
-                &.btn-yellow{
-                    background: $primary;
-                    color: $darkBg;
-                }
-                &.btn-purpal{
-                    background: $tertiary;
-                    color: $white;
-                    font-size: 20px;
-                    margin-top: 60px;
-                }
-                &.btn-google{
-                    color: $white;
-                    border: 1px solid rgba($color: $white, $alpha: 0.3);
-                    font-size: 20px;
-                    font-weight:weight(light);
-                }
-            }
+.login-form-inner-wrap{
+    min-width: 430px;
+    h1{
+        color: $white;
+        font-size: 28px;
+        font-weight:weight(light);
+        margin-bottom: 40px;
+        strong{
+            // @include font(poppins, medium, weight);
+            font-weight:weight(medium);
+        }
+    }
+    .or-label{
+        color: $white;
+        text-align: center;
+        margin: 32px 0;
+        font-size: 20px;
+        font-weight:weight(light);
+    }
+    .form-control{
+        min-height: 60px;
+        background-color: rgba($color: $black, $alpha: 0.3);
+        border-radius: 40px;
+        padding: 10px 30px;
+        font-size: 20px;
+        font-weight:weight(light);
+        color:rgba($color: $white, $alpha: 0.6);
+        border-color:rgba($color: $white, $alpha: 0.3);
+        margin-bottom: 30px;
+    }
+    .btn-default{
+        font-size: 22px;
+        min-height: 60px;
+        border-radius: 30px;
+        font-weight:weight(medium);
+        &.btn-yellow{
+            background: $primary;
+            color: $darkBg;
+        }
+        &.btn-purpal{
+            background: $tertiary;
+            color: $white;
+            font-size: 20px;
+            margin-top: 60px;
+        }
+        &.btn-google{
+            color: $white;
+            border: 1px solid rgba($color: $white, $alpha: 0.3);
+            font-size: 20px;
+            font-weight:weight(light);
         }
     }
 }
