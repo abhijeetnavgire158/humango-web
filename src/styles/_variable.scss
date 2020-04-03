@@ -33,6 +33,13 @@ $base-font-stack: (
         ),
     )
 );
+$font-weights:(
+    "light":300,
+    "regular":400,
+    "medium":500,
+    "semibold":600,
+    "bold":700
+);
 
 // ======>> Color Variables <<======
 $white : #FFFFFF;
@@ -44,3 +51,4 @@ $tertiary: #4D4084;
 $darkBg: #14232E;
 $lightBg:#DAE1E9;
 $lightText: #9E9E9E;
+
