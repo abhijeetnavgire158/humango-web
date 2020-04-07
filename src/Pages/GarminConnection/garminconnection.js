@@ -12,22 +12,20 @@ const GarminConnection = () => {
         garminConnections.garminWorkoutConnection();
     }
 
-    return (<div className="row m-0 loginWrap">
-        <div className="col bgDarkGreen loginFormWrap d-flex justify-content-center align-items-center">
-            <div className="loginFormInnerWrap">
-                <div className="text-center formTitle">HumanGo <strong>Garmin - Connectivity</strong></div>
-
-                <button 
+    return (<div className="row m-0 login-wrap">
+        <div className="col bgDarkGreen login-form-wrap d-flex justify-content-center align-items-center">
+            <div className="login-form-inner-wrap">
+                <h1 className="text-center">HumanGo <strong>Garmin - Connectivity</strong></h1>
+                <button
                     className="btn btn-default btn-yellow btn- w-100 mt-3"
                     onClick={() => garminActivityConnection()}>
                     Garmin - Activity
                     </button>
-                <button 
+                <button
                     className="btn btn-default btn-yellow btn- w-100 mt-3"
                     onClick={() => garminWorkoutConnection()}>
                     Garmin - Workout
                 </button>
-
 
             </div>
         </div>
