@@ -1,15 +1,37 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
+import { firebaseService } from '../../Services/firebase-service';
 import Loader from '../../Components/Shared/loader';
+import history from '../../Services/history';
 import "./styles.scss";
 import logo from "../../Images/logo_v.png";
 
+
 const SignUp = () => {
-  const { register, handleSubmit, watch, errors } = useForm()
-  const onSubmit = data => { console.log(data) }
   const [error, setErrors] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { register, handleSubmit, watch, errors, reset } = useForm();
 
+  const onSubmit = data => {
+    console.log(data);
+    setErrors('');
+    setIsLoading(true);
+    // return false;
+    let registeredUser = firebaseService.createAccount({
+      email: data.emailId,
+      password: data.password,
+      name: data.userName
+    }).then((userResponse) => {
+      console.log(userResponse);
+      setErrors(userResponse.message);
+      reset();
+      setIsLoading(false);
+    }).catch((error) => {
+      console.log(error);
+      setIsLoading(false);
+      setErrors(error.message);
+    });    
+  }
 
   return (<div className="row m-0 loginWrap">
     <div className="col bgYellow d-flex  justify-content-center align-items-center">
@@ -32,7 +54,7 @@ const SignUp = () => {
               placeholder="Username"
               name="userName"
               ref={register({ required: true, minLength: 6 })}
-             />
+            />
             <span className="form-error">
               {errors.userName && errors.userName.type == 'required' && 'User name is required'}
               {errors.userName && errors.userName.type == 'minLength' && 'User name is required'}
@@ -89,7 +111,10 @@ const SignUp = () => {
             Register
         </button>
         </form>
-        <button className="btn btn-default btn-purpal w-100">Back to Login</button>
+        <button 
+          className="btn btn-default btn-purpal w-100"
+          disabled={isLoading}
+          onClick={() => history.push('/')}>Back to Login</button>
       </div>
     </div>
   </div>);

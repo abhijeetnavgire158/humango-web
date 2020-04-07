@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as firebase from 'firebase';
 import FirebaseUser from '../../Models/firebase-user';
-
+import history from '../../Services/history';
 import { userService } from '../../Services/user-service';
 import Loader from '../../Components/Shared/loader';
 import "./styles.scss";
@@ -126,7 +126,9 @@ const SignIn = () => {
           &nbsp;
           Sing in with Google
           </button>
-        <button className="btn btn-default btn-purpal w-100">Create a New Account</button>
+        <button 
+          className="btn btn-default btn-purpal w-100"
+          onClick={() => history.push('/register')}>Create a New Account</button>
       </div>
     </div>
   </div>);

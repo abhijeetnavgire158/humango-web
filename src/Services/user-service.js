@@ -31,7 +31,6 @@ function logout() {
 
 
 function register(user) {
-    user.providerId = appConstants.DEFAULT_PROVIDER_ID;
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
