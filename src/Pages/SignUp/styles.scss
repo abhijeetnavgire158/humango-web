@@ -1,0 +1,15 @@
+.loginWrap {
+    .loginFormWrap {
+        .loginFormInnerWrap {
+            .form-control {
+                margin-bottom: 0px !important;
+            }
+            .form-group {
+                margin-bottom: 30px !important;
+                .form-error {
+                    margin-left: 30px;    
+                }
+            }
+        }
+    }
+}  
