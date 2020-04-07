@@ -1,90 +1,77 @@
-body{
-    font-family: 'Poppins', sans-serif;
-}
-html, body, #root, .loginWrap{
-    height: 100vh;
-}
-.loginWrap{
-    .loginFormWrap{
-        .loginFormInnerWrap{
-            min-width: 430px;
-            .formTitle{
-                color: $white;
-                font-size: 28px;
-                line-height: 42px;
-                font-weight: 300;
-                margin-bottom: 40px;
-                strong{
-                    font-weight: 500;
-                }
-            }
-            .orLable{
-                color: $white;
-                text-align: center;
-                margin: 32px 0;
-                font-size: 20px;
-                line-height: 30px;
-                font-weight: 300;
-            }
-            .form-control{
-                min-height: 60px;
-                background: rgba(0,0,0,0.3);
-                border-radius: 40px;
-                padding: 10px 31px;
-                font-size: 20px;
-                line-height: 30px;
-                font-weight: 300;
-                opacity: 0.6;
-                margin-bottom: 30px;
-            }
-            .btn-default{
-                font-size: 22px;
-                line-height: 33px;
-                min-height: 60px;
-                border-radius: 30px;
-                font-weight: 500;
-                &.btn-yellow{
-                    background: $yellow;
-                    color: $darkGreen;
-                }
-                &.btn-purpal{
-                    background: $purpal;
-                    color: $white;
-                    font-size: 20px;
-                    line-height: 30px;
-                    margin-top: 60px;
-                }
-                &.btn-google{
-                    color: $white;
-                    border: 1px solid $white;
-                    font-size: 20px;
-                    line-height: 30px;
-                    font-weight: 300;
-                }
-            }
-            .loginError {
-                max-width: 430px;
-                margin-left: 32px;
-                display: flex;
-            }
+.login-form-inner-wrap{
+    min-width: 470px;
+    h1{
+        color: $white;
+        font-size: 28px;
+        font-weight:weight(light);
+        margin-bottom: 40px;
+        strong{
+            // @include font(poppins, medium, weight);
+            font-weight:weight(medium);
+        }
+    }    
+    .default-link{
+        color: $white;
+        font-size: 18px;
+    }
+    .or-label{
+        color: $white;
+        text-align: center;
+        margin: 25px 0;
+        font-size: 20px;
+        font-weight:weight(light);
+    }
+    .form-control{
+        min-height: 60px;
+        background-color: rgba($color: $black, $alpha: 0.3);
+        border-radius: 40px;
+        padding: 10px 30px;
+        font-size: 20px;
+        font-weight:weight(light);
+        color:rgba($color: $white, $alpha: 0.6);
+        border-color:rgba($color: $white, $alpha: 0.3);
+        margin-bottom: 25px;
+        &:focus{
+            border-color:rgba($color: $white, $alpha: 1);
+            outline: none;
+        }
+    }
+    .btn-default{
+        font-size: 22px;
+        min-height: 60px;
+        border-radius: 30px;
+        font-weight:weight(medium);
+        &.btn-yellow{
+            background: $primary;
+            color: $darkBg;
+        }
+        &.btn-purpal{
+            background: $tertiary;
+            color: $white;
+            font-size: 20px;
+            margin-top: 60px;
+        }
+        &.btn-google{
+            color: $white;
+            border: 1px solid rgba($color: $white, $alpha: 0.3);
+            font-size: 20px;
+            font-weight:weight(light);
         }
     }
 }
-.landingPageWrap{
+.landing-page-wrap{
     min-width: 530px;
     height: 622px;
-    
     .logo{
         flex-grow: 1;
     }
     .link{
         font-size: 22px;
-        line-height: 33px;
-        color: $darkGreen;
-        font-weight: 300;
+        color: $darkBg;
+        font-weight:weight(light);
         text-decoration: underline;
         strong{
-            font-weight: 500;
+            font-weight:weight(medium);
         }
     }
 }
