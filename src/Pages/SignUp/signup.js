@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { firebaseService } from '../../Services/firebase-service';
+import { appErrors } from '../../Constants/app-error-messages';
 import Loader from '../../Components/Shared/loader';
 import history from '../../Services/history';
 import "./styles.scss";
@@ -54,22 +55,37 @@ const SignUp = () => {
               className="form-control"
               placeholder="Username"
               name="userName"
-              ref={register({ required: true, minLength: 6 })}
+              ref={register({ 
+                required: appErrors.REQUIRED_USER_NAME,
+                minLength: {
+                  value: 6,
+                  message: appErrors.MIN_LENGTH_6
+                }
+               })}
             />
-            <span className="form-error">
-              {errors.userName && errors.userName.type == 'required' && 'User name is required'}
-              {errors.userName && errors.userName.type == 'minLength' && 'User name is required'}
-            </span>
+            {errors.userName ? (
+              <span className="form-error"> {errors.userName.message} </span>
+            ) : null}           
           </div>
           <div className="form-group">
             <input
-              type="email"
+              type="text"
               className="form-control"
               placeholder="Email-id"
               name="emailId"
-              ref={register({ required: true })}
+              ref={register({ 
+                required: appErrors.REQUIRED_EMAIL_ID,
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  message: appErrors.INVALID_EMAIL
+                }
+               })}
             />
-            <span className="form-error">{errors.emailId && 'EmailId is required'}</span>
+            {errors.emailId ? (
+              <span className="form-error">
+                {errors.emailId.message}
+              </span>
+            ) : null}            
           </div>
           <div className="form-group">
             <input
@@ -77,12 +93,19 @@ const SignUp = () => {
               className="form-control"
               placeholder="Password"
               name="password"
-              ref={register({ required: true, minLength: 6, })}
+              ref={register({ 
+                required: appErrors.REQUIRED_PASSWORD, 
+                minLength: {
+                  value: 6,
+                  message: appErrors.MIN_LENGTH_PASSWORD
+                },
+              })}
             />
-            <span className="form-error">
-              {errors.confirmPassword && errors.confirmPassword.type == 'required' && 'Password is required.'}
-              {errors.confirmPassword && errors.confirmPassword.type == 'minLength' && 'Password should be minimum 6 characters.'}
-            </span>
+            {errors.password ? (
+              <span className="form-error">
+                {errors.password.message}
+              </span>
+            ) : null}            
           </div>
           <div className="form-group">
             <input
@@ -96,11 +119,14 @@ const SignUp = () => {
                 validate: (value) => value === watch('password')
               })}
             />
-            <span className="form-error">
-              {errors.confirmPassword && errors.confirmPassword.type == 'required' && 'Password is required.'}
-              {errors.confirmPassword && errors.confirmPassword.type == 'minLength' && 'Password should be minimum 6 characters.'}
-              {errors.confirmPassword && errors.confirmPassword.type == 'validate' && 'Password & confirm password should be same.'}
-            </span>
+            {errors.confirmPassword ? (
+              <span className="form-error">
+                {errors.confirmPassword.type == 'required' && appErrors.REQUIRED_PASSWORD}
+                {errors.confirmPassword.type == 'minLength' && appErrors.MIN_LENGTH_PASSWORD}
+                {errors.confirmPassword.type == 'validate' && appErrors.CHECK_CONFIRM_PASSWORD}
+              </span>
+            ) : null}
+            
           </div>
           <div className="form-group">
             <span className="loginError">{error}</span>
