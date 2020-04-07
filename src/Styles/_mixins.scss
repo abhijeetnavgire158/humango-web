@@ -1,0 +1,32 @@
+// ======>> Font Family & Weight Function Mixins <<======
+@mixin font($group, $variant: regular, $properties: family weight style, $font-stack: $base-font-stack) {
+    $font-properties: map-deep-get($font-stack, $group, $variant);
+    @if $font-properties {
+        @each $property, $values in $font-properties {
+            @if contains($properties, $property) {
+                font-#{$property}: map-get($font-properties, $property);
+            }
+        }
+    }
+}
+
+/// Fetch nested keys
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Keys to fetch
+/// 
+/// @return {*}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        @if type-of($map) != "map" {
+            @warn '`#{$map}` is not a map.';
+            @return false;
+        }
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
