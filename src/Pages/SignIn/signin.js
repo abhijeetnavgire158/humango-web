@@ -128,7 +128,7 @@ const SignIn = () => {
             height="20"
           />
           &nbsp;
-          Sing in with Google
+          Sign in with Google
           </button>
         <a 
           className="btn btn-default btn-purpal w-100 d-flex align-items-center justify-content-center"
