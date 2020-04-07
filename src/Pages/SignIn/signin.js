@@ -71,9 +71,9 @@ const SignIn = () => {
     );
   }
 
-  return (<div className="row m-0 loginWrap">
+  return (<div className="row m-0 login-wrap">
     <div className="col bgYellow d-flex  justify-content-center align-items-center">
-      <div className="landingPageWrap text-center d-flex justify-content-center align-items-center flex-column">
+      <div className="landing-page-wrap text-center d-flex justify-content-center align-items-center flex-column">
         <a className="logo d-flex  justify-content-center align-items-center"><img src={logo} alt="HumanGo Logo" /></a>
         <div className="d-flex justify-content-between w-100">
           <a href="#" className="link"><strong>Why</strong> HumanGo</a>
@@ -81,9 +81,9 @@ const SignIn = () => {
         </div>
       </div>
     </div>
-    <div className="col bgDarkGreen loginFormWrap d-flex justify-content-center align-items-center">
-      <div className="loginFormInnerWrap">
-        <div className="text-center formTitle">HumanGo <strong>Login</strong></div>
+    <div className="col bgDarkGreen login-form-frap d-flex justify-content-center align-items-center">
+      <div className="login-form-inner-wrap">
+        <h1 className="text-center">HumanGo <strong>Login</strong></h1>
         <form onSubmit={e => handleForm(e)}>
           <div className="form-group">
             <input
@@ -113,10 +113,10 @@ const SignIn = () => {
           <button disabled={isLoading} className="btn btn-default btn-yellow btn- w-100 mt-3">
             Login
           </button>
-          <label className="orLable w-100">OR</label>
+          <label className="or-label w-100">OR</label>
 
         </form>
-        <button className="btn btn-default btn-google w-100 mb-5 googleBtn" onClick={() => signInWithGoogle()}>
+        <button className="btn btn-default btn-google w-100 mb-5 google-btn" onClick={() => signInWithGoogle()}>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
             alt="logo"

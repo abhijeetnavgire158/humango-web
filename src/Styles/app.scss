@@ -1,4 +1,7 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600|Titillium+Web:400,600,700&display=swap');
+
+@import 'mixins';
 @import 'variable';
+@import 'layout';
 @import 'common';
-@import 'loader';

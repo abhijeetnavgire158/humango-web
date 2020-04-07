@@ -11,9 +11,9 @@ const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
 
-  return (<div className="row m-0 loginWrap">
+  return (<div className="row m-0 login-wrap">
     <div className="col bgYellow d-flex  justify-content-center align-items-center">
-      <div className="landingPageWrap text-center d-flex justify-content-center align-items-center flex-column">
+      <div className="landing-page-wrap text-center d-flex justify-content-center align-items-center flex-column">
         <a className="logo d-flex  justify-content-center align-items-center"><img src={logo} alt="HumanGo Logo" /></a>
         <div className="d-flex justify-content-between w-100">
           <a href="#" className="link"><strong>Why</strong> HumanGo</a>
@@ -21,9 +21,9 @@ const SignUp = () => {
         </div>
       </div>
     </div>
-    <div className="col bgDarkGreen loginFormWrap d-flex justify-content-center align-items-center">
-      <div className="loginFormInnerWrap">
-        <div className="text-center formTitle">HumanGo <strong>Registration</strong></div>
+    <div className="col bgDarkGreen login-form-wrap d-flex justify-content-center align-items-center">
+      <div className="login-form-inner-wrap">
+        <h1 className="text-center">HumanGo <strong>Registration</strong></h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-group">
             <input
