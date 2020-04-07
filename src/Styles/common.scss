@@ -1,5 +1,5 @@
 .login-form-inner-wrap{
-    min-width: 430px;
+    min-width: 470px;
     h1{
         color: $white;
         font-size: 28px;
@@ -9,11 +9,15 @@
             // @include font(poppins, medium, weight);
             font-weight:weight(medium);
         }
+    }    
+    .default-link{
+        color: $white;
+        font-size: 18px;
     }
     .or-label{
         color: $white;
         text-align: center;
-        margin: 32px 0;
+        margin: 25px 0;
         font-size: 20px;
         font-weight:weight(light);
     }
@@ -26,7 +30,11 @@
         font-weight:weight(light);
         color:rgba($color: $white, $alpha: 0.6);
         border-color:rgba($color: $white, $alpha: 0.3);
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+        &:focus{
+            border-color:rgba($color: $white, $alpha: 1);
+            outline: none;
+        }
     }
     .btn-default{
         font-size: 22px;
