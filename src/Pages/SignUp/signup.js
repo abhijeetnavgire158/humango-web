@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import Loader from '../../Components/Shared/loader';
 import "./styles.scss";
 import logo from "../../Images/logo_v.png";
+import backArrow from "../../Images/back-arrow.svg"
 
 const SignUp = () => {
   const { register, handleSubmit, watch, errors } = useForm()
@@ -89,7 +90,10 @@ const SignUp = () => {
             Register
         </button>
         </form>
-        <button className="btn btn-default btn-purpal w-100">Back to Login</button>
+        <div className="mt-5 text-center">
+        <a className="default-link" href="/"> <img src={backArrow} className="mr-2"/>Back to Login</a>
+        </div>
+        
       </div>
     </div>
   </div>);

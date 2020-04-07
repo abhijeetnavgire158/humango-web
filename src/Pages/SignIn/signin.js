@@ -113,10 +113,14 @@ const SignIn = () => {
           <button disabled={isLoading} className="btn btn-default btn-yellow btn- w-100 mt-3">
             Login
           </button>
+          <div className="text-center mt-5">
+          <a href="#" className="default-link">Forgot Password</a>
+          </div>
+          
           <label className="or-label w-100">OR</label>
 
         </form>
-        <button className="btn btn-default btn-google w-100 mb-5 google-btn" onClick={() => signInWithGoogle()}>
+        <button className="btn btn-default btn-google w-100 google-btn" onClick={() => signInWithGoogle()}>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
             alt="logo"
@@ -126,7 +130,7 @@ const SignIn = () => {
           &nbsp;
           Sing in with Google
           </button>
-        <button className="btn btn-default btn-purpal w-100">Create a New Account</button>
+        <a className="btn btn-default btn-purpal w-100 d-flex align-items-center justify-content-center" href="/register">Create a New Account</a>
       </div>
     </div>
   </div>);
