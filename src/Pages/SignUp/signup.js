@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { firebaseService } from '../../Services/firebase-service';
-import { appErrors } from '../../Constants/app-error-messages';
+import { appErrors } from '../../Constants/app_error_messages';
 import Loader from '../../Components/Shared/loader';
 import history from '../../Services/history';
 import "./styles.scss";

@@ -1,4 +1,4 @@
-import { appConstants } from '../Constants/app-constants';
+import { appConstants } from '../Constants/app_constants';
 
 export const userService = {
     login,

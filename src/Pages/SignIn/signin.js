@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as firebase from 'firebase';
-import FirebaseUser from '../../Models/firebase-user';
+import FirebaseUser from '../../Models/firebase_user';
 import history from '../../Services/history';
 import { userService } from '../../Services/user-service';
 import Loader from '../../Components/Shared/loader';
