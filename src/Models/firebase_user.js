@@ -1,4 +1,5 @@
-import { appConstants } from '../Constants/app-constants';
+import { appConstants } from '../Constants/app_constants';
+
 export default class FirebaseUser {
     constructor(uid, email, displayName, providerId) {
         this.uid = uid;

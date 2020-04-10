@@ -1,7 +1,7 @@
-import { appConstants } from '../Constants/app-constants';
+import { appConstants } from '../Constants/app_constants';
 import * as firebase from 'firebase';
-import FirebaseUser from '../Models/firebase-user';
-import createUser from '../Models/create-user';
+import FirebaseUser from '../Models/firebase_user';
+import createUser from '../Models/create_user';
 import { userService } from './user-service';
 
 export const firebaseService = {
