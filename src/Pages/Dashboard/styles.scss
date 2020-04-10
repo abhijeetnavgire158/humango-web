@@ -5,3 +5,29 @@
 .graph-conetent {
     text-align: center;
 }
+
+.uncheck-switch {
+    display: "flex";
+    justify-content: "center";
+    align-items: "center";
+    height: "100%";
+    font-size: 18;
+    color: #ffffff;
+    padding-right: 0;
+    margin-left: -40px !important;
+  }
+
+.check-switch{
+    display: "flex";
+    justify-content: "center";
+    align-items: "center";
+    height: "100%";
+    font-size: 18;
+    color: "white";
+    padding-right: 2;
+    margin-left: 29px !important;
+  }
+
+  .btn-primary {
+      background-color: #4D4084;
+  }
